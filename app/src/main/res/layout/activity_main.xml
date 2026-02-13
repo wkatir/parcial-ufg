@@ -20,38 +20,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registro de Usuario"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginBottom="@dimen/_20sdp" />
+            android:textSize="@dimen/_24ssp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/md_theme_light_primary"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:letterSpacing="-0.01" />
 
         <!-- Card del formulario -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="@dimen/_3sdp"
-            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_16sdp"
             app:strokeWidth="0dp"
-            android:layout_marginBottom="@dimen/_16sdp">
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:backgroundTint="@color/md_theme_light_surface">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:padding="@dimen/_20sdp">
 
                 <!-- Nombre -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
-                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
-                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
-                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
-                    app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+                    app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_12sdp"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    app:startIconTint="@color/md_theme_light_primary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etNombre"
@@ -59,20 +62,22 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_nombre"
                         android:inputType="textPersonName"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Edad -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
-                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
-                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
-                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
-                    app:suffixText="años">
+                    app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_12sdp"
+                    app:suffixText="años"
+                    app:prefixTextColor="@color/md_theme_light_onSurfaceVariant">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etEdad"
@@ -80,7 +85,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_edad"
                         android:inputType="number"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Spinner Género -->
@@ -89,25 +95,26 @@
                     android:layout_height="wrap_content"
                     android:text="@string/label_genero"
                     android:textSize="@dimen/_11ssp"
-                    android:textColor="#666666"
-                    android:layout_marginBottom="@dimen/_4sdp"
-                    android:layout_marginStart="@dimen/_4sdp" />
+                    android:textColor="@color/md_theme_light_onSurfaceVariant"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/poppins_medium" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardElevation="0dp"
-                    app:cardCornerRadius="@dimen/_8sdp"
-                    app:strokeColor="#79747E"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:strokeColor="@color/md_theme_light_outline"
                     app:strokeWidth="1dp"
-                    android:layout_marginBottom="@dimen/_12sdp">
+                    android:layout_marginBottom="@dimen/_16sdp">
 
                     <Spinner
                         android:id="@+id/spinnerGenero"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:paddingStart="@dimen/_8sdp"
-                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_height="@dimen/_48sdp"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingEnd="@dimen/_12sdp"
                         android:entries="@array/genero_array"
                         android:background="@android:color/transparent" />
                 </com.google.android.material.card.MaterialCardView>
@@ -125,7 +132,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/checkbox_terminos"
                     android:textSize="@dimen/_12ssp"
-                    android:layout_marginBottom="@dimen/_6sdp" />
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins" />
 
                 <!-- Switch Recordar -->
                 <com.google.android.material.materialswitch.MaterialSwitch
@@ -133,7 +141,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/switch_recordar"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppins" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -142,21 +151,25 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegistrar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
             android:text="@string/btn_registrar"
-            android:textSize="@dimen/_13ssp"
-            app:cornerRadius="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp" />
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppins_semibold"
+            app:cornerRadius="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:letterSpacing="0.02" />
 
         <!-- Botón Ver Perfil Guardado -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVerPerfil"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
             android:text="@string/btn_ver_perfil"
-            android:textSize="@dimen/_13ssp"
-            app:cornerRadius="@dimen/_10sdp"
-            style="@style/Widget.Material3.Button.OutlinedButton" />
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppins_medium"
+            app:cornerRadius="@dimen/_12sdp"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:letterSpacing="0.02" />
 
     </LinearLayout>
 </ScrollView>

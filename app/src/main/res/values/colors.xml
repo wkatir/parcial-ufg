@@ -55,9 +55,9 @@
     <color name="md_theme_dark_outline">#938F99</color>
     <color name="md_theme_dark_outlineVariant">#49454F</color>
 
-    <!-- Colores por categoría -->
-    <color name="color_nino">#FF87CEEB</color>
-    <color name="color_adolescente">#FFFFF176</color>
-    <color name="color_adulto">#FF81C784</color>
-    <color name="color_adulto_mayor">#FFB0BEC5</color>
+    <!-- Colores por categoría - Paleta profesional -->
+    <color name="color_nino">#B8D4E8</color>          <!-- Azul polvoso suave -->
+    <color name="color_adolescente">#FFF8DC</color>    <!-- Crema cornsilk -->
+    <color name="color_adulto">#A8C69F</color>         <!-- Verde salvia -->
+    <color name="color_adulto_mayor">#D4CFC9</color>   <!-- Gris cálido taupe -->
 </resources>

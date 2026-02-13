@@ -29,7 +29,27 @@
         <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
         <item name="colorOutline">@color/md_theme_light_outline</item>
         <item name="colorOutlineVariant">@color/md_theme_light_outlineVariant</item>
+
+        <!-- Typography - Google Fonts Poppins -->
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
     </style>
 
     <style name="Theme.ParcialSM100223" parent="Base.Theme.ParcialSM100223" />
+
+    <!-- Text Styles -->
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextAppearance.App.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextAppearance.App.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
 </resources>

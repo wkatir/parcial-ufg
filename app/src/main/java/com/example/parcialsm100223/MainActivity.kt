@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRegistrar: MaterialButton
     private lateinit var btnVerPerfil: MaterialButton
     private lateinit var prefs: SharedPreferences
+    private var isFirstResume = true
 
     companion object {
         const val PREFS_NAME = "perfil_prefs"
@@ -63,13 +64,11 @@ class MainActivity : AppCompatActivity() {
         val nombre = etNombre.text.toString().trim()
         val edadStr = etEdad.text.toString().trim()
 
-        // Validar nombre
         if (nombre.isEmpty()) {
             etNombre.setError(getString(R.string.error_nombre_vacio))
             hayErrores = true
         }
 
-        // Validar edad
         if (edadStr.isEmpty()) {
             etEdad.setError(getString(R.string.error_edad_vacia))
             hayErrores = true
@@ -81,7 +80,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Validar términos
         if (!cbTerminos.isChecked) {
             cbTerminos.setError(getString(R.string.error_terminos))
             hayErrores = true
@@ -95,7 +93,6 @@ class MainActivity : AppCompatActivity() {
         val genero = spinnerGenero.selectedItem.toString()
         val categoria = determinarCategoria(edad)
 
-        // Guardar en SharedPreferences si el Switch está activado
         if (switchRecordar.isChecked) {
             prefs.edit()
                 .putString(KEY_NOMBRE, nombre)
@@ -104,7 +101,6 @@ class MainActivity : AppCompatActivity() {
                 .apply()
         }
 
-        // Enviar datos a PerfilActivity
         val intent = Intent(this, PerfilActivity::class.java).apply {
             putExtra("nombre", nombre)
             putExtra("edad", edad)
@@ -128,12 +124,20 @@ class MainActivity : AppCompatActivity() {
         etNombre.setText(nombre)
         etEdad.setText(edad.toString())
 
-        // Seleccionar el género correcto en el Spinner
         val generoArray = resources.getStringArray(R.array.genero_array)
         val index = generoArray.indexOf(genero)
         if (index >= 0) {
             spinnerGenero.setSelection(index)
         }
+
+        val categoria = determinarCategoria(edad)
+        val intent = Intent(this, PerfilActivity::class.java).apply {
+            putExtra("nombre", nombre)
+            putExtra("edad", edad)
+            putExtra("genero", genero)
+            putExtra("categoria", categoria)
+        }
+        startActivity(intent)
     }
 
     private fun determinarCategoria(edad: Int): String {
@@ -145,7 +149,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Ciclo de vida - EXTRA
     override fun onPause() {
         super.onPause()
         Toast.makeText(this, getString(R.string.toast_en_segundo_plano), Toast.LENGTH_SHORT).show()
@@ -153,10 +156,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(this, getString(R.string.toast_bienvenido), Toast.LENGTH_SHORT).show()
+        if (!isFirstResume) {
+            Toast.makeText(this, getString(R.string.toast_bienvenido), Toast.LENGTH_SHORT).show()
+        }
+        isFirstResume = false
     }
 
-    // AlertDialog para confirmar salida - EXTRA
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         AlertDialog.Builder(this)

@@ -24,23 +24,19 @@ class PerfilActivity : AppCompatActivity() {
             insets
         }
 
-        // Recibir datos del Intent
         val nombre = intent.getStringExtra("nombre") ?: ""
         val edad = intent.getIntExtra("edad", 0)
         val genero = intent.getStringExtra("genero") ?: ""
         val categoria = intent.getStringExtra("categoria") ?: ""
 
-        // Mostrar datos en los TextViews
         findViewById<TextView>(R.id.tvNombre).text = nombre
         findViewById<TextView>(R.id.tvEdad).text = edad.toString()
         findViewById<TextView>(R.id.tvGenero).text = genero
         findViewById<TextView>(R.id.tvCategoria).text = categoria
 
-        // Mensaje personalizado
         findViewById<TextView>(R.id.tvMensaje).text =
             "Hola $nombre, eres un $categoria de género $genero."
 
-        // Cambiar color de fondo según categoría
         val colorRes = when (categoria) {
             getString(R.string.cat_nino) -> R.color.color_nino
             getString(R.string.cat_adolescente) -> R.color.color_adolescente
@@ -50,7 +46,6 @@ class PerfilActivity : AppCompatActivity() {
         }
         layoutPerfil.setBackgroundColor(ContextCompat.getColor(this, colorRes))
 
-        // Botón Editar Perfil -> regresar con finish()
         findViewById<Button>(R.id.btnEditarPerfil).setOnClickListener {
             finish()
         }
