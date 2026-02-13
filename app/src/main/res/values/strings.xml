@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">ParcialSM100223</string>
+
+    <!-- MainActivity -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_edad">Edad</string>
+    <string name="label_genero">Seleccionar género</string>
+    <string name="checkbox_terminos">Acepto términos y condiciones</string>
+    <string name="switch_recordar">Recordar datos</string>
+    <string name="btn_registrar">Registrar</string>
+    <string name="btn_ver_perfil">Ver Perfil Guardado</string>
+
+    <!-- PerfilActivity -->
+    <string name="btn_editar_perfil">Editar Perfil</string>
+    <string name="label_nombre">Nombre:</string>
+    <string name="label_edad">Edad:</string>
+    <string name="label_genero_perfil">Género:</string>
+    <string name="label_categoria">Categoría:</string>
+
+    <!-- Categorías -->
+    <string name="cat_nino">Niño/a</string>
+    <string name="cat_adolescente">Adolescente</string>
+    <string name="cat_adulto">Adulto</string>
+    <string name="cat_adulto_mayor">Adulto Mayor</string>
+
+    <!-- Spinner items -->
+    <string-array name="genero_array">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <!-- Validaciones -->
+    <string name="error_nombre_vacio">El nombre es obligatorio</string>
+    <string name="error_edad_vacia">La edad es obligatoria</string>
+    <string name="error_edad_invalida">La edad debe ser entre 1 y 120</string>
+    <string name="error_terminos">Debe aceptar los términos y condiciones</string>
+
+    <!-- Mensajes -->
+    <string name="toast_no_datos">No hay datos guardados</string>
+    <string name="toast_en_segundo_plano">Aplicación en segundo plano</string>
+    <string name="toast_bienvenido">Bienvenido nuevamente</string>
+    <string name="dialog_salir_titulo">Confirmar salida</string>
+    <string name="dialog_salir_mensaje">¿Estás seguro de que deseas salir de la aplicación?</string>
+    <string name="dialog_si">Sí</string>
+    <string name="dialog_no">No</string>
 </resources>
