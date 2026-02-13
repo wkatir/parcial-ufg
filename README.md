@@ -17,11 +17,9 @@ Aplicación Android desarrollada en Kotlin que permite registrar y visualizar pe
 
 ## Video Demostración
 
-Mira el video demostrativo de la aplicación en funcionamiento:
+https://github.com/user-attachments/assets/tu-video-id-aqui.mp4
 
-📹 **[Ver video: EXAMEN.mp4](./demo/EXAMEN.mp4)**
-
-El video muestra todas las funcionalidades de la aplicación incluyendo el registro de usuarios, validaciones, persistencia de datos y visualización del perfil con colores dinámicos.
+> Si el video no carga automáticamente, [descárgalo aquí](./demo/EXAMEN.mp4)
 
 ## Tecnologías Utilizadas
 
